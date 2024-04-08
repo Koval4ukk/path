@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>Как Мы на обсерваторию ходили...</title>
+    <title>Path</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
@@ -17,10 +17,10 @@
 
 <script src='//d3js.org/d3.v3.min.js' charset='utf-8'></script>
 <script>
-mapboxgl.accessToken = 'pk.eyJ1Ijoidml0amF6enoiLCJhIjoiY2l3c3liZnZpMDBiZTJ6bWFpbDA5Ym1hcyJ9.T6cpNveIfkobDqFaNCkYww';
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGlneWRlcCIsImEiOiJjbGYxNDQwMTIwNHJkM3hyMGdzYzM0djFjIn0.7jGv0vgJNN3BdxdQZoQY4g';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/outdoors-v9',
+    style: 'mapbox://styles/digydep/clucmxos6010i01pre5al04dx',
     zoom: 0
 });
 
@@ -28,7 +28,7 @@ map.on('load', function () {
     // We use D3 to fetch the JSON here so that we can parse and use it separately
     // from GL JS's use in the added source. You can use any request method (library
     // or otherwise) that you want.
-    d3.json('https://github.com/Koval4ukk/path/blob/main/path.geojson', function(err, data) {
+    d3.json('https://raw.githubusercontent.com/Koval4ukk/path/main/path.geojson', function(err, data) {
         if (err) throw err;
 
         // save full coordinate list for later
@@ -70,51 +70,7 @@ map.on('load', function () {
 });
 
 
-    var popup = new mapboxgl.Popup({closeOnClick: false})   // PIP
-    .setHTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/FLfetUaj6u0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>')
-    .addTo(map);  
-    
-    new mapboxgl.Marker()
-    .setLngLat([24.627658, 48.046980])
-    .setPopup(popup)
-    .addTo(map);
-	
-	var popup = new mapboxgl.Popup({closeOnClick: false})   // PIP1
-    .setHTML('<img src="https://k29gag.am.files.1drv.com/y4m9xibQUGtFYUTk0ykKIhdUBSvF_iS_jY8EN-_cEREJR4fbDurXql-xjGrM_RCEZGg8sMe7AeURKsiO7IJi-64dx4CF1bkVV0wtAgdwlEmHFRiSDi9Ww2QHt6xh17q6JiVau9nuNH9_KHhnT-jKvGVepfHIQVTO_y-ItIBIWxjTseinWtR0zuUa4hRP4cTA8voHfpmm4SPHOq2_U3yL-PHBQ?width=660&height=440&cropmode=none" width="660" height="440" />')
-    .addTo(map);  
-    
-    new mapboxgl.Marker()
-    .setLngLat([24.626919, 48.046673])
-    .setPopup(popup)
-    .addTo(map);
-	
-	
-	var popup = new mapboxgl.Popup({closeOnClick: false})   // PIP2
-    .setHTML('<img src="https://kw9gag.am.files.1drv.com/y4mKO875NRYtDySgdyVDU6uvKtV-T9GKXdyOMy7p6BRb1VR8SXFBoCclW8rWbC4fBHQH7I4ZfyZ62r6GHkjOssIcdnpj580ifIdiwzDMdPZD8OV_QJb0LdJSbCHESsvKbOOLO1oxYrBI3mHE6tDTgq4UlFA39y0rcNrq8ruNqdnAUTTtjgo13mDATDnbhHEOzz4Fi7UuQw8z1nPmEugxA53NQ?width=660&height=440&cropmode=none" width="660" height="440" />')
-    .addTo(map);  
-    
-    new mapboxgl.Marker()
-    .setLngLat([24.626915, 48.048772])
-    .setPopup(popup)
-    .addTo(map);
-	
-    var popup = new mapboxgl.Popup({closeOnClick: false})   // PIP3
-    .setHTML('<img src="https://mg9gag.am.files.1drv.com/y4mytMBbnD54yxk0CirlM0JwiBkqmVu7pQK3Jc2FgMRv4rrtPLgA0MZYtRX16Sd4FbgD93_VQ7SDxn_FIsEtw97TNz8O5m6VAArXfSSf4kuYW1MYsLpvncjnEReXe1D1LwLrNbSBELzT8q8y78ypk5XxE6Vb_2iKpXqPi_CbzUvW7GISstoJPLv9vsozTONcNWlv-r_TlA_18ayNLnXhqLP_g?width=660&height=440&cropmode=none" width="660" height="440" />')
-    .addTo(map);  
-    
-    new mapboxgl.Marker()
-    .setLngLat([24.621901, 48.060982])
-    .setPopup(popup)
-    .addTo(map);
-    
-    var popup = new mapboxgl.Popup({closeOnClick: false})   // PIP3
-    .setHTML('<img src="https://l29gag.am.files.1drv.com/y4m6QcGyemYkSdkwU0DjlCIo6pAcvx3x3mcovEPrKWu1zKqIyJ3yAQe7BwmHqmCthn08B3sr4tiRF_3YZPaGBw76-CUn5xMf62yVP_M380uHaSuc8biaqdYNH-NuC47X57EwvDXl9Mh9esS9QWn_LVRjNnk4Y_e7vdy6AbnRmdA2QJ7KZ3cDfwG03YYLniqn3SgC9rIcMXecPaznojWwOdBog?width=660&height=440&cropmode=none" width="660" height="440" />')
-    .addTo(map);  
-    
-    new mapboxgl.Marker()
-    .setLngLat([24.535618, 48.072933])
-    .setPopup(popup)
-    .addTo(map);
+
     
     
 </script>
