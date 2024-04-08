@@ -17,10 +17,10 @@
 
 <script src='//d3js.org/d3.v3.min.js' charset='utf-8'></script>
 <script>
-mapboxgl.accessToken = 'pk.eyJ1Ijoidml0amF6enoiLCJhIjoiY2l3c3liZnZpMDBiZTJ6bWFpbDA5Ym1hcyJ9.T6cpNveIfkobDqFaNCkYww';
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGlneWRlcCIsImEiOiJjbGYxNDQwMTIwNHJkM3hyMGdzYzM0djFjIn0.7jGv0vgJNN3BdxdQZoQY4g';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/outdoors-v9',
+    style: 'mapbox://styles/digydep/clucmxos6010i01pre5al04dx',
     zoom: 0
 });
 
@@ -28,7 +28,7 @@ map.on('load', function () {
     // We use D3 to fetch the JSON here so that we can parse and use it separately
     // from GL JS's use in the added source. You can use any request method (library
     // or otherwise) that you want.
-    d3.json('https://vitja.zzz.com.ua/JSONZ/tour.geojson', function(err, data) {
+    d3.json('https://github.com/Koval4ukk/path/blob/main/path.geojson', function(err, data) {
         if (err) throw err;
 
         // save full coordinate list for later
