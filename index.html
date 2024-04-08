@@ -46,14 +46,14 @@ map.on('load', function () {
             "source": "trace",
             "paint": {
                 "line-color": "red",
-                "line-opacity": 0.1,
+                "line-opacity": 0,
                 "line-width": 5
             }
         });
 
         // setup the viewport
-        map.jumpTo({ 'center': coordinates[0], 'zoom': 15 });
-        map.setPitch(70);
+        map.jumpTo({ 'center': coordinates[0], 'zoom': 12 });
+        map.setPitch(62);
 
         // on a regular basis, add more coordinates from the saved list and update the map
         var i = 0;
